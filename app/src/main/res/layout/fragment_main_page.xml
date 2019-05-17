@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/total_info_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/totalInfo"
+        style="@style/Headline_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="156dp"
+        android:gravity="center"
+        android:inputType=""
+        android:text="@string/totalInfo" />
+
+    <TextView
+        android:id="@+id/photo"
+        android:layout_width="116dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/totalInfo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle_photo"
+        android:gravity="center"
+        android:text="@string/photo"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalInfo"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_toEndOf="@+id/photo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rank"
+            android:layout_width="210dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:text="@string/rankLabel"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="210dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:text="@string/currentDate"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/education"
+            android:layout_width="210dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:text="@string/education"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/ownNumber"
+            android:layout_width="210dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle"
+            android:gravity="center"
+            android:text="@string/ownNumber"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photo"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:divider="@drawable/separator"
+        android:dividerPadding="4dp"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/nalTypeCurrentDate"
+            style="@style/TotalInfoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/nalTypeCurrentDate" />
+
+        <TextView
+            android:id="@+id/reportNalYears"
+            style="@style/TotalInfoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/reportNalYears" />
+
+        <TextView
+            android:id="@+id/dailyFlightAccounting"
+            style="@style/TotalInfoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/dailyFlightAccounting" />
+
+        <TextView
+            android:id="@+id/gymAccounting"
+            style="@style/TotalInfoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/gymAccounting" />
+
+        <TextView
+            android:id="@+id/checkTypeAirTraining"
+            style="@style/TotalInfoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/checkTypeAirTraining" />
+
+        <TextView
+            android:id="@+id/breaks"
+            style="@style/TotalInfoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/breaks" />
+
+        <TextView
+            android:id="@+id/skydiving"
+            style="@style/TotalInfoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/skydiving" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/question" />
+
+    </LinearLayout>
+</RelativeLayout>

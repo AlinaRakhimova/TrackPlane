@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dailybackground"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dailyFlightAccounting"
+        style="@style/Headline_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:gravity="center"
+        android:inputType=""
+        android:text="@string/dailyFlightAccounting" />
+
+    <TextView
+        android:id="@+id/etDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dailyFlightAccounting"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:inputType=""
+        android:text="@string/date"
+        android:textColor="@color/orange_light"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dailyFlightAccounting"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@id/etDate"
+        app:errorEnabled="true">
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:background="@drawable/rectangle_photo"
+            android:inputType="number"
+            tools:ignore="Autofill,LabelFor" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dailyFlightAccounting"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@id/etDay"
+        app:errorEnabled="true">
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:background="@drawable/rectangle_photo"
+            android:inputType="number"
+            tools:ignore="Autofill,LabelFor" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dailyFlightAccounting"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@id/etMonth"
+        app:errorEnabled="true">
+
+        <EditText
+            android:layout_width="46dp"
+            android:layout_height="20dp"
+            android:background="@drawable/rectangle_photo"
+            android:inputType="number"
+            tools:ignore="Autofill,LabelFor" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/planeType"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/etDay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rectangle" />
+
+    <ToggleButton
+        android:id="@+id/dayTime"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/planeType"
+        android:layout_toStartOf="@id/planeType"
+        android:background="@drawable/rectangle"
+        android:textColor="@android:color/background_light"
+        android:textOff="@string/day"
+        android:textOn="@string/day"
+        android:textSize="13sp" />
+
+    <ToggleButton
+        android:id="@+id/nightTime"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/planeType"
+        android:layout_toEndOf="@id/planeType"
+        android:background="@drawable/rectangle"
+        android:textColor="@android:color/background_light"
+        android:textOff="@string/night"
+        android:textOn="@string/night"
+        android:textSize="13sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/flightTypeRecycler"
+        android:name="com.gmail.catdog_puga24.trackplane.ui.newFlight.view.NewFlightActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nightTime"
+        android:layout_margin="8dp"
+        tools:context=".ui.newFlight.view.NewFlightActivity"
+        tools:listitem="@layout/fragment_flight_types" />
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Летная книга</string>
+    <string name="firstNameLabel">ИМЯ</string>
+    <string name="lastNameLabel">ФАМИЛИЯ</string>
+    <string name="rankLabel">ДОЛЖНОСТЬ</string>
+    <string name="AddLabel">Добавить</string>
+    <string name="workPlaceLabel">Место работы</string>
+    <string name="changeInfo">Изменить данные</string>
+    <string name="NalDateLabel">Налет на дату</string>
+    <string name="month">Месяц</string>
+    <string name="year">Год</string>
+    <string name="day">День</string>
+    <string name="quantity">Налет</string>
+    <string name="meteo">Метео</string>
+    <string name="buttonOK">OK</string>
+    <string name="addFlight">Добавить налет</string>
+    <string name="date">ДАТА</string>
+    <string name="open">ОТКРЫТЬ</string>
+    <string name="flightSpecialtyLabel">ЛЕТНАЯ СПЕЦИАЛЬНОСТЬ</string>
+    <string name="categoryLabel">КЛАСС</string>
+    <string name="patronymicLabel">ОТЧЕСТВО</string>
+    <string name="flightBookLabel">ЛЕТНАЯ КНИЖКА</string>
+    <string name="totalInfo">ОБЩИЕ ДАННЫЕ</string>
+    <string name="nalTypeCurrentDate">НАЛЕТ ПО ТИПАМ САМОЛЕТОВ НА ТЕКУЩУЮ ДАТУ</string>
+    <string name="photo">ФОТО</string>
+    <string name="currentDate">ДД.ММ.ГГГГ</string>
+    <string name="education">ВОЕННОЕ ОБРАЗОВАНИЕ</string>
+    <string name="ownNumber">ЛИЧНЫЙ НОМЕР</string>
+    <string name="reportNalYears">УЧЕТ НАЛЕТА ПО ГОДАМ</string>
+    <string name="dailyFlightAccounting">ПОДЕННЫЙ УЧЕТ ПОЛЕТОВ</string>
+    <string name="gymAccounting">УЧЕТ НАЛЕТА НА ТРЕНАЖЕРАХ</string>
+    <string name="checkTypeAirTraining">ПРОВЕРКИ ПО ВИДАМ ЛЕТНЫХ ПОДГОТОВОК</string>
+    <string name="breaks">ПЕРЕРЫВЫ</string>
+    <string name="skydiving">ПРЫЖКИ С ПАРАШЮТОМ</string>
+    <string name="plane_type_add">ДОБАВИТЬ ТИП ВС</string>
+    <string name="cancel">ОТМЕНА</string>
+    <string name="add">ДОБАВИТЬ</string>
+    <string name="night">НОЧЬ</string>
+
+    <string name="quantityFlights">КОЛИЧЕСТВО ПОЛЕТОВ</string>
+    <string name="totalTime">ОБЩИЙ НАЛЕТ</string>
+    <string name="closeCabin">В ЗАКРЫТОЙ КАБИНЕ</string>
+    <string name="totalSmu">ВСЕГО В СМУ</string>
+    <string name="cloud">В ОБЛАКАХ</string>
+    <string name="quantityZahod">КОЛИЧЕСТВО ЗАХОДОВ</string>
+    <string name="quantityPosad">КОЛИЧЕСТВО ПОСАДОК</string>
+    <string name="quantityPosadMp">КОЛИЧЕСТВО ПОСАДО К ПРИ МП</string>
+    <string name="hour">часов</string>
+    <string name="min">минут</string>
+    <string name="save">Сохранить</string>
+    <string name="settings">Настройки</string>
+</resources>
