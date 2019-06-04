@@ -1,4 +1,4 @@
-package com.gmail.catdog_puga24.trackplane.ui.settings;
+package com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes;
 
 import android.util.Log;
 
@@ -33,9 +33,8 @@ public class PlaneTypePresenterImpl extends MvpPresenter<PlaneTypeView> implemen
         addPlaneType(planeType).observeOn(AndroidSchedulers.mainThread()).subscribe(new DisposableSingleObserver<Long>() {
             @Override
             public void onSuccess(Long aLong) {
-                //TODO Вывод уведомления о добавлении данных типа самолета
-                Log.d(TAG, "Новый тип самолета добавлен");
-                getViewState().refreshRecycler(); //FIXME Не происходит обновление списка
+                getViewState().showToast("Тип самолета добавлен");
+                getViewState().refreshRecycler(); //FIXME Не происходит обновление списка - создать пассивный адаптер
             }
 
             @Override

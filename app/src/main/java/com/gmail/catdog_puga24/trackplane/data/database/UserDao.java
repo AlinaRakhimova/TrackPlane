@@ -10,13 +10,13 @@ import com.gmail.catdog_puga24.trackplane.data.database.entity.User;
 
 import java.util.List;
 
-import io.reactivex.Maybe;
+import io.reactivex.Single;
 
 @Dao
 public interface UserDao {
 
     @Query("SELECT * FROM myprofile")
-    Maybe<List<User>> getAll();
+    Single<List<User>> getAll();
 
     @Insert
     long insert(User user);

@@ -1,13 +1,14 @@
 package com.gmail.catdog_puga24.trackplane.di.modules;
 
+import com.gmail.catdog_puga24.trackplane.data.database.RoomHelper;
 import com.gmail.catdog_puga24.trackplane.service.BaseSettings;
 import com.gmail.catdog_puga24.trackplane.ui.authorization.presenter.AuthPresenterImpl;
 import com.gmail.catdog_puga24.trackplane.ui.flightBook.presenter.FlightBookPresenterImpl;
 import com.gmail.catdog_puga24.trackplane.ui.mainPage.view.MainPagePresenterImpl;
 import com.gmail.catdog_puga24.trackplane.ui.newFlight.presenter.NewFlightPresenterImpl;
 import com.gmail.catdog_puga24.trackplane.ui.newFlight.presenter.NewFlightToTypePresenter;
-import com.gmail.catdog_puga24.trackplane.ui.profile.presenter.ProfilePresenterImpl;
-import com.gmail.catdog_puga24.trackplane.ui.settings.PlaneTypePresenterImpl;
+import com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes.PlaneTypePresenterImpl;
+import com.gmail.catdog_puga24.trackplane.ui.settings.profile.presenter.ProfilePresenterImpl;
 
 import javax.inject.Singleton;
 
@@ -32,4 +33,6 @@ public interface AppComponent {
     void inject(NewFlightPresenterImpl newFlightPresenter);
 
     void inject(NewFlightToTypePresenter newFlightToTypePresenter);
+
+    void inject(RoomHelper roomHelper);
 }

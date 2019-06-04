@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context="com.gmail.catdog_puga24.trackplane.ui.settings.PlaneTypeFragment"
+        tools:context="com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes.PlaneTypeFragment"
         tools:listitem="@layout/fragment_plane_types" />
 
     <android.support.design.widget.FloatingActionButton

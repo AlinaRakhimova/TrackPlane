@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
@@ -77,14 +78,14 @@ public class NewFlightToTypeActivity extends MvpAppCompatActivity implements New
     }
 
     @OnClick(R.id.save)
-    public void addFlightToDatabase() {
+    public void addFlightToDatabase() { // FIXME Пересмотреть перенос участка кода в presenter
         Flight newFlight = createFlight();
         Log.d(Constant.TAG, newFlight.toString());
         Single<Long> id = presenter.addFlightToDatabase(newFlight);
         id.observeOn(AndroidSchedulers.mainThread()).subscribe(new DisposableSingleObserver<Long>() {
             @Override
             public void onSuccess(Long aLong) {
-                Log.d(TAG, "Полет добавлен под номером: " + aLong);
+                showToast("Полет добавлен под номером: " + aLong);
                 openFlightBookScreen(); //FIXME Уточнить механизм закрытия окна после добавления данных
             }
 
@@ -127,6 +128,10 @@ public class NewFlightToTypeActivity extends MvpAppCompatActivity implements New
         Log.d("Flight7", "openFlightBookScreen");
         Intent intent = new Intent(this, TotalInformationActivity.class);
         startActivity(intent);
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
 }

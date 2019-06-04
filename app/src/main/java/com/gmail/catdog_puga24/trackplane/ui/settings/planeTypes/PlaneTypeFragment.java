@@ -1,4 +1,4 @@
-package com.gmail.catdog_puga24.trackplane.ui.settings;
+package com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,13 +13,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.gmail.catdog_puga24.trackplane.App;
 import com.gmail.catdog_puga24.trackplane.R;
 import com.gmail.catdog_puga24.trackplane.data.database.entity.TypePlane;
-import com.gmail.catdog_puga24.trackplane.ui.settings.adapter.PlaneTypeAdapter;
+import com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes.adapter.PlaneTypeAdapter;
 
 import java.util.List;
 
@@ -110,6 +111,11 @@ public class PlaneTypeFragment extends MvpAppCompatFragment implements PlaneType
     }
 
     @Override
+    public void showToast(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show(); //TODO Проверить контекст
+    }
+
+    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         if (context instanceof OnPlaneTypeListFragmentInteractionListener) {
@@ -118,13 +124,6 @@ public class PlaneTypeFragment extends MvpAppCompatFragment implements PlaneType
             throw new RuntimeException(context.toString()
                     + " must implement SelectTypeFlightListener");
         }
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        presenter.onDestroy();
-        Log.d("Flight7", "onDestroy");
     }
 
     @Override

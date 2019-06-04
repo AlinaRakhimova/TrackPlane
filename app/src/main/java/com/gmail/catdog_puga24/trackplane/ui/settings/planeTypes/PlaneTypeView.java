@@ -1,12 +1,13 @@
-package com.gmail.catdog_puga24.trackplane.ui.profile.view;
+package com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes;
 
 import com.arellomobile.mvp.MvpView;
 import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
-import com.gmail.catdog_puga24.trackplane.data.database.entity.User;
 
 @StateStrategyType(AddToEndSingleStrategy.class)
-public interface ProfileFragmentView extends MvpView {
+interface PlaneTypeView extends MvpView {
 
-    void initProfile(User user);
+    void refreshRecycler();
+
+    void showToast(String message);
 }

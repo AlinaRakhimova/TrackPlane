@@ -17,13 +17,13 @@ public class TypeFlightListCreator {
         TypeFlight typeFlight1 = new TypeFlight();
         typeFlight1.setName("вывозных");
         TypeFlight typeFlight2 = new TypeFlight();
-        typeFlight1.setName("контрольных");
+        typeFlight2.setName("контрольных");
         TypeFlight typeFlight3 = new TypeFlight();
-        typeFlight1.setName("тренировочных");
+        typeFlight3.setName("тренировочных");
         TypeFlight typeFlight4 = new TypeFlight();
-        typeFlight1.setName("зачетных");
+        typeFlight4.setName("зачетных");
         TypeFlight typeFlight5 = new TypeFlight();
-        typeFlight1.setName("в качестве инструктора");
+        typeFlight5.setName("в качестве инструктора");
 
         typeFlights.add(typeFlight1);
         typeFlights.add(typeFlight2);

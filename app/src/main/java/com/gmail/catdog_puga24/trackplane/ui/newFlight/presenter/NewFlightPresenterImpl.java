@@ -65,7 +65,6 @@ public class NewFlightPresenterImpl extends MvpPresenter<NewFlightView> implemen
         }
 
         private void getTypeFlightList() {
-
             typeFlightDao.getAll()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())

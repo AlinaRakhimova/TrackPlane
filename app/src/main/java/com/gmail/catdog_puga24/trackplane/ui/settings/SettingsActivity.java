@@ -9,7 +9,8 @@ import android.util.Log;
 
 import com.gmail.catdog_puga24.trackplane.R;
 import com.gmail.catdog_puga24.trackplane.ui.ViewPagerAdapter;
-import com.gmail.catdog_puga24.trackplane.ui.profile.view.ProfileFragment;
+import com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes.PlaneTypeFragment;
+import com.gmail.catdog_puga24.trackplane.ui.settings.profile.view.ProfileFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

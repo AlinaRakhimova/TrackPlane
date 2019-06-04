@@ -1,4 +1,4 @@
-package com.gmail.catdog_puga24.trackplane.ui.profile.view;
+package com.gmail.catdog_puga24.trackplane.ui.settings.profile.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.arellomobile.mvp.MvpAppCompatFragment;
 import com.arellomobile.mvp.presenter.InjectPresenter;
@@ -14,7 +15,7 @@ import com.gmail.catdog_puga24.trackplane.App;
 import com.gmail.catdog_puga24.trackplane.R;
 import com.gmail.catdog_puga24.trackplane.data.database.entity.User;
 import com.gmail.catdog_puga24.trackplane.ui.authorization.view.AuthorizationActivity;
-import com.gmail.catdog_puga24.trackplane.ui.profile.presenter.ProfilePresenterImpl;
+import com.gmail.catdog_puga24.trackplane.ui.settings.profile.presenter.ProfilePresenterImpl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,11 +33,17 @@ public class ProfileFragment extends MvpAppCompatFragment implements ProfileFrag
     @BindView(R.id.lastName)
     TextView lastName;
 
+    @BindView(R.id.patronymic)
+    TextView patronymic;
+
     @BindView(R.id.rank)
     TextView rank;
 
     @BindView(R.id.flightSpecialty)
     TextView flightSpecialty;
+
+    @BindView(R.id.category)
+    TextView category;
 
     @InjectPresenter
     ProfilePresenterImpl presenter;
@@ -72,7 +79,14 @@ public class ProfileFragment extends MvpAppCompatFragment implements ProfileFrag
     public void initProfile(User user) {
         firstName.setText(user.getFirstName());
         lastName.setText(user.getLastName());
+        patronymic.setText(user.getPatronymic());
         rank.setText(user.getRank());
         flightSpecialty.setText(user.getFlightSpecialty());
+        category.setText(user.getCategory());
+    }
+
+    @Override
+    public void showToast(String message) {
+        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show(); //TODO Проверить контекст
     }
 }

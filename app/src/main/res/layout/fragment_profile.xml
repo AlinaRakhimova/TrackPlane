@@ -1,44 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_auth"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">
-
-    <TextView
-        android:id="@+id/rank"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/rankLabel" />
-
-    <TextView
-        android:id="@+id/firstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rank"
-        android:text="@string/firstNameLabel" />
-
-    <TextView
-        android:id="@+id/lastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rank"
-        android:layout_toEndOf="@id/firstName"
-        android:text="@string/lastNameLabel" />
+    android:background="@drawable/auth_background"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/flightSpecialty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/firstName"
-        android:text="@string/workPlaceLabel" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/elevation"
+        android:gravity="center_vertical"
+        android:hint="@string/flightSpecialtyLabel"
+        android:inputType=""
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="14sp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/elevation"
+        android:gravity="center_vertical"
+        android:hint="@string/rankLabel"
+        android:inputType=""
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="14sp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/elevation"
+        android:gravity="center_vertical"
+        android:hint="@string/firstNameLabel"
+        android:inputType=""
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="14sp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/elevation"
+        android:gravity="center_vertical"
+        android:hint="@string/lastNameLabel"
+        android:inputType=""
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="14sp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/patronymic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/elevation"
+        android:gravity="center_vertical"
+        android:hint="@string/patronymicLabel"
+        android:inputType=""
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="14sp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rectangle"
+        android:elevation="@dimen/elevation"
+        android:gravity="center_vertical"
+        android:hint="@string/categoryLabel"
+        android:inputType=""
+        android:paddingStart="@dimen/padding_8dp"
+        android:paddingEnd="@dimen/padding_8dp"
+        android:textColor="@android:color/background_dark"
+        android:textColorHint="@android:color/background_light"
+        android:textSize="14sp"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/changeInfo"
         style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
         android:text="@string/changeInfo" />
 
-</RelativeLayout>
+</LinearLayout>
 

@@ -22,6 +22,7 @@ public class User {
     private String category;
 
     public User(String firstName, String lastName, String patronymic, String rank, String flightSpecialty, String category) {
+        this.id = 1;
         this.firstName = firstName;
         this.lastName = lastName;
         this.rank = rank;

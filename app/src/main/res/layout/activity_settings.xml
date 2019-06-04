@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/total_info_background"
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
@@ -16,7 +17,7 @@
             android:layout_height="wrap_content"
             android:background="@color/green_light"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@android:color/darker_gray"
+            app:tabIndicatorColor="@color/orange_light"
             app:tabMode="fixed" />
 
     </android.support.design.widget.AppBarLayout>

@@ -2,9 +2,9 @@ package com.gmail.catdog_puga24.trackplane.ui.authorization.view;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
@@ -52,8 +52,9 @@ public class AuthorizationActivity extends MvpAppCompatActivity implements Autho
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d("Flight7", "onStart");
         if (isChangingUser()) {
+            open.setText("Сохранить");
+            presenter.getUser();
             open.setOnClickListener(v -> updateUser());
         } else {
             presenter.onStart();
@@ -85,29 +86,24 @@ public class AuthorizationActivity extends MvpAppCompatActivity implements Autho
     }
 
     @Override
+    public void fillUserFields(String firstName, String lastName, String patronymic, String rank, String flightSpecialty, String category) {
+        fieldFirstName.setText(firstName);
+        fieldLastName.setText(lastName);
+        fieldPatronymic.setText(patronymic);
+        fieldRank.setText(rank);
+        fieldFlightSpecialty.setText(flightSpecialty);
+        fieldCategory.setText(category);
+    }
+
+    @Override
     public void openFlightBookScreen() {
-        Log.d("Flight7", "openFlightBookScreen");
         Intent intent = new Intent(this, TotalInformationActivity.class);
         startActivity(intent);
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d("Flight7", "onStop");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d("Flight7", "onPause");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        presenter.onDestroy();
-        Log.d("Flight7", "onDestroy");
+    public void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
 }

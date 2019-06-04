@@ -1,4 +1,4 @@
-package com.gmail.catdog_puga24.trackplane.ui.settings.adapter;
+package com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.gmail.catdog_puga24.trackplane.R;
 import com.gmail.catdog_puga24.trackplane.data.database.entity.TypePlane;
-import com.gmail.catdog_puga24.trackplane.ui.settings.PlaneTypeFragment;
+import com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes.PlaneTypeFragment;
 
 import java.util.List;
 

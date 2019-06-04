@@ -6,6 +6,7 @@ import android.content.Context;
 import com.gmail.catdog_puga24.trackplane.App;
 import com.gmail.catdog_puga24.trackplane.data.database.AppDatabase;
 import com.gmail.catdog_puga24.trackplane.data.database.FlightDao;
+import com.gmail.catdog_puga24.trackplane.data.database.RoomHelper;
 import com.gmail.catdog_puga24.trackplane.data.database.TypeFlightDao;
 import com.gmail.catdog_puga24.trackplane.data.database.TypeFlightListCreator;
 import com.gmail.catdog_puga24.trackplane.data.database.TypePlaneDao;
@@ -69,6 +70,12 @@ public class AppModule {
     @Provides
     public BaseSettings getBaseSettings() {
         return new BaseSettings();
+    }
+
+    @Singleton
+    @Provides
+    public RoomHelper getRoomHelper() {
+        return new RoomHelper();
     }
 
 }

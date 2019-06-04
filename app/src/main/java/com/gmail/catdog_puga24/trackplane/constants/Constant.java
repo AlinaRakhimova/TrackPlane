@@ -44,4 +44,6 @@ public class Constant {
     public static final String COLUMN_TYPE_ID = "id";
     public static final String COLUMN_TYPE_NAME = "name";
 
+    public static final int INDEX_FIRST_USER = 0;
+
 }

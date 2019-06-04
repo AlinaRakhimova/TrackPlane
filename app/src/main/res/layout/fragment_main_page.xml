@@ -12,9 +12,19 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="156dp"
+        android:layout_marginEnd="24dp"
         android:gravity="center"
         android:inputType=""
         android:text="@string/totalInfo" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/totalInfo"
+        android:layout_marginTop="156dp"
+        android:contentDescription="@string/settings"
+        android:src="@drawable/ic_settings_24dp" />
 
     <TextView
         android:id="@+id/photo"
@@ -159,13 +169,6 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="@string/skydiving" />
-
-        <ImageView
-            android:id="@+id/settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/settings"
-            android:src="@drawable/question" />
 
     </LinearLayout>
 </RelativeLayout>

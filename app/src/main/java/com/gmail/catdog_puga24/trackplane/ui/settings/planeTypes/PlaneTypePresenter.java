@@ -1,4 +1,4 @@
-package com.gmail.catdog_puga24.trackplane.ui.settings;
+package com.gmail.catdog_puga24.trackplane.ui.settings.planeTypes;
 
 import com.gmail.catdog_puga24.trackplane.data.database.entity.TypePlane;
 
